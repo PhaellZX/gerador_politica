@@ -1,24 +1,20 @@
-// src/App.tsx
 import { useState } from 'react';
 import { Step1 } from './components/Step1';
 import { Step2 } from './components/Step2';
 import { Result } from './components/Result';
 
-// 1. Importações do Chakra UI
-import { Container, Box, Heading, Text, VStack } from '@chakra-ui/react'; // Adicionado Text e VStack
+// Importações do Chakra UI
+import { Container, Box, Heading, Text, VStack } from '@chakra-ui/react';
 
-// --- ATUALIZADO: A interface IPolicyInput agora bate com o models.py ---
 export interface IPolicyInput {
   site_name: string;
   site_url: string;
   company_name?: string;
   contact_email: string;
 
-  // Novos campos LGPD
   dpo_name: string;
   dpo_email: string;
 
-  // Checkboxes atualizados
   collects_personal_data: boolean;
   collects_payment_data: boolean;
   uses_cookies: boolean;
@@ -31,23 +27,18 @@ export interface IPolicyOutput {
   policy: string;
   terms: string;
 }
-// ----------------------------------------
 
 function App() {
   const [step, setStep] = useState(1);
-  
-  // --- ATUALIZADO: O estado inicial com os novos campos ---
   const [formData, setFormData] = useState<IPolicyInput>({
     site_name: '',
     site_url: 'https://',
     company_name: '',
     contact_email: '',
     
-    // Novos padrões
     dpo_name: '',
     dpo_email: '',
 
-    // Padrões atualizados
     collects_personal_data: true,
     collects_payment_data: false,
     uses_cookies: true,
@@ -56,7 +47,6 @@ function App() {
     sells_data: false,
     has_user_accounts: false,
   });
-  // ----------------------------------------------------
 
   const [results, setResults] = useState<IPolicyOutput | null>(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -123,7 +113,6 @@ function App() {
     }
   };
 
-  // Layout atualizado com o "sub-nome" que discutimos
   return (
     <Container maxW="container.lg" centerContent py={{ base: 8, md: 12 }}>
       <Box

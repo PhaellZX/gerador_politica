@@ -1,5 +1,3 @@
-// src/components/Result.tsx
-
 // 1. Importações do Chakra (COM 'Text' e 'IconButton' REMOVIDOS)
 import {
   Button,
@@ -11,19 +9,16 @@ import {
   AlertDescription,
   Box,
   Link,
-  useToast, // 'Text' foi removido daqui
+  useToast,
   Tabs,
   TabList,
   Tab,
   TabPanels,
   TabPanel,
   Code,
-  HStack, // 'IconButton' foi removido daqui
+  HStack,
 } from '@chakra-ui/react';
 import { CopyIcon } from '@chakra-ui/icons';
-
-// --- AQUI ESTÁ A CORREÇÃO PRINCIPAL ---
-// Colando AMBAS as interfaces que este arquivo precisa
 
 interface IPolicyInput {
   site_name: string;
@@ -45,12 +40,11 @@ interface IPolicyOutput {
   policy: string;
   terms: string;
 }
-// ----------------------------------------
 
 interface ResultProps {
   results: IPolicyOutput | null;
   reset: () => void;
-  data: Partial<IPolicyInput>; // Agora 'IPolicyInput' é conhecido!
+  data: Partial<IPolicyInput>;
 }
 
 export const Result: React.FC<ResultProps> = ({ results, reset, data }) => {
@@ -67,7 +61,6 @@ export const Result: React.FC<ResultProps> = ({ results, reset, data }) => {
   };
 
   if (!results) {
-    // ... (código de erro)
     return (
       <div>
         <h2>Erro</h2>
@@ -76,13 +69,11 @@ export const Result: React.FC<ResultProps> = ({ results, reset, data }) => {
       </div>
     );
   }
-
-  // --- (O restante do seu código JSX continua aqui, sem alterações) ---
   return (
     <VStack spacing={6} align="stretch">
       {/* --- Alerta de Afiliado Principal (Hostinger) --- */}
       <Alert
-        status="success" // Corrigido para verde
+        status="success"
         variant="solid"
         borderRadius="md"
         flexDirection={{ base: 'column', md: 'row' }}
@@ -106,7 +97,7 @@ export const Result: React.FC<ResultProps> = ({ results, reset, data }) => {
           as={Link}
           href="#LINK-AFILIADO-HOSTINGER"
           isExternal
-          colorScheme="green" // Combinando com o "success"
+          colorScheme="green"
           variant="outline"
           bg="white"
           color="gray.800"
@@ -156,7 +147,6 @@ export const Result: React.FC<ResultProps> = ({ results, reset, data }) => {
           </Button>
         </Alert>
       )}
-      {/* --- FIM DO ALERTA --- */}
 
       {/* Abas para Política e Termos */}
       <Tabs isFitted variant="enclosed" colorScheme="blue">

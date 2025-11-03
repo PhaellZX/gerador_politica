@@ -1,5 +1,3 @@
-# /backend/models.py
-
 from pydantic import BaseModel, HttpUrl, EmailStr
 from typing import Optional
 

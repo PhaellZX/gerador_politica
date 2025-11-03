@@ -1,5 +1,3 @@
-// src/components/Step2.tsx
-
 import {
   Button,
   Checkbox,
@@ -15,7 +13,6 @@ import {
   useToast,
 } from '@chakra-ui/react';
 
-// --- ATUALIZADO: A interface IPolicyInput ---
 interface IPolicyInput {
   site_name: string;
   site_url: string;
@@ -31,7 +28,6 @@ interface IPolicyInput {
   sells_data: boolean;
   has_user_accounts: boolean;
 }
-// -------------------------------------------
 
 interface StepProps {
   data: Partial<IPolicyInput>;
@@ -66,7 +62,6 @@ export const Step2: React.FC<StepProps> = ({
     });
   }
 
-  // --- ATUALIZADO: Os checkboxes ---
   return (
     <VStack spacing={6} align="stretch">
       <Heading as="h2" size="lg" fontWeight="semibold">
@@ -138,10 +133,7 @@ export const Step2: React.FC<StepProps> = ({
           Você VENDE dados pessoais para terceiros?
         </Checkbox>
       </VStack>
-      {/* --- FIM DOS CHECKBOXES ATUALIZADOS --- */}
 
-
-      {/* Alerta de Afiliado (permanece igual) */}
       {data.uses_analytics && (
         <Alert status="info" borderRadius="md">
           <AlertIcon />
@@ -157,7 +149,6 @@ export const Step2: React.FC<StepProps> = ({
         </Alert>
       )}
 
-      {/* Botões (permanecem iguais) */}
       <HStack justify="space-between" mt={4}>
         <Button size="lg" variant="ghost" onClick={prevStep}>
           Anterior

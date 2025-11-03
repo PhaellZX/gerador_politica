@@ -1,5 +1,3 @@
-// src/components/Step1.tsx
-
 import {
   Button,
   FormControl,
@@ -7,11 +5,10 @@ import {
   Input,
   VStack,
   Heading,
-  FormHelperText, // Importamos o HelperText
-  Divider, // Importamos um Divisor
+  FormHelperText,
+  Divider,
 } from '@chakra-ui/react';
 
-// --- ATUALIZADO: A interface IPolicyInput ---
 interface IPolicyInput {
   site_name: string;
   site_url: string;
@@ -27,7 +24,6 @@ interface IPolicyInput {
   sells_data: boolean;
   has_user_accounts: boolean;
 }
-// -------------------------------------------
 
 interface StepProps {
   data: Partial<IPolicyInput>;
@@ -40,7 +36,6 @@ export const Step1: React.FC<StepProps> = ({ data, updateData, nextStep }) => {
     updateData({ [e.target.name]: e.target.value });
   };
 
-  // Lista de campos obrigatórios atualizada
   const isButtonDisabled =
     !data.site_name ||
     !data.site_url ||
@@ -105,13 +100,12 @@ export const Step1: React.FC<StepProps> = ({ data, updateData, nextStep }) => {
         />
       </FormControl>
 
-      <Divider my={4} /> {/* Separador visual */}
+      <Divider my={4} />
 
       <Heading as="h3" size="md" fontWeight="semibold" color="blue.600">
         Informações da LGPD (Encarregado de Dados)
       </Heading>
       
-      {/* --- NOVOS CAMPOS LGPD --- */}
       <FormControl isRequired>
         <FormLabel htmlFor="dpo_name">Nome do Encarregado (DPO)</FormLabel>
         <Input
@@ -144,7 +138,6 @@ export const Step1: React.FC<StepProps> = ({ data, updateData, nextStep }) => {
           contato.
         </FormHelperText>
       </FormControl>
-      {/* --- FIM DOS NOVOS CAMPOS --- */}
 
       <Button
         colorScheme="blue"

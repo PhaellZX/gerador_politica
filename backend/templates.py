@@ -1,13 +1,9 @@
-# /backend/templates.py
-
 from models import PolicyInput
 from datetime import date
 
 # Função auxiliar para gerar a data de hoje
 def get_today_date():
     return date.today().strftime("%d de %B de %Y")
-
-# --- FUNÇÃO PRINCIPAL DA POLÍTICA (REESCRITA) ---
 
 def generate_policy(data: PolicyInput) -> str:
     """
@@ -84,8 +80,6 @@ def generate_policy(data: PolicyInput) -> str:
     policy += f"**{company_display}**\n"
     
     return policy
-
-# --- FUNÇÃO DE TERMOS DE USO (Pode manter a simples) ---
 
 def generate_terms(data: PolicyInput) -> str:
     """Gera o texto dos Termos de Uso."""
