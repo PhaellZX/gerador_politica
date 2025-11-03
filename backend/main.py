@@ -12,6 +12,7 @@ app = FastAPI(
 origins = [
     "http://localhost:5173", # Endereço do seu app React (Vite)
     "http://localhost:3000", # Endereço comum de app React (CRA)
+    "https://gerador-politica.vercel.app" # Endereço do app React hospedado
 ]
 
 app.add_middleware(
