@@ -12,7 +12,6 @@ import {
   AlertDescription,
   Box,
   Link,
-  Text,
   useToast,
 } from '@chakra-ui/react';
 
