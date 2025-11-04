@@ -135,7 +135,7 @@ export const Result: React.FC<ResultProps> = ({ results, reset, data }) => {
           </HStack>
           <Button
             as={Link}
-            href="#LINK-AFILIADO-NUVEMSHOP"
+            href="https://www.nuvemshop.com.br/partners/rlt-servio-de-data-center"
             isExternal
             colorScheme="blue"
             variant="solid"
