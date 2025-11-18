@@ -95,7 +95,7 @@ export const Result: React.FC<ResultProps> = ({ results, reset, data }) => {
         </HStack>
         <Button
           as={Link}
-          href="#LINK-AFILIADO-HOSTINGER"
+          href="https://www.hostg.xyz/aff_c? offer_id=815&aff_id=219401"
           isExternal
           colorScheme="green"
           variant="outline"
