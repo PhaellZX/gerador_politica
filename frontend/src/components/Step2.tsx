@@ -141,7 +141,7 @@ export const Step2: React.FC<StepProps> = ({
             <AlertTitle>Dica!</AlertTitle>
             <AlertDescription>
               Ferramentas como Google Analytics podem ser complexas.
-              <Link href="#link-afiliado-plausible" color="blue.500" isExternal ml={1}>
+              <Link href="https://go.hotmart.com/E103039216D?dp=1" color="blue.500" isExternal ml={1}>
                 Considere alternativas mais simples e focadas em privacidade.
               </Link>
             </AlertDescription>
