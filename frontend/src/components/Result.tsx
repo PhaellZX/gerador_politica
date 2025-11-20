@@ -75,6 +75,8 @@ export const Result: React.FC<ResultProps> = ({ results, reset, data }) => {
       <Alert
         status="success"
         variant="solid"
+        bg="purple.600"
+        color="white"
         borderRadius="md"
         flexDirection={{ base: 'column', md: 'row' }}
         alignItems="center"
@@ -83,7 +85,7 @@ export const Result: React.FC<ResultProps> = ({ results, reset, data }) => {
       >
         {/* ... (código do banner Hostinger) ... */}
         <HStack spacing={4} mb={{ base: 4, md: 0 }}>
-          <AlertIcon boxSize="40px" />
+          <AlertIcon boxSize="40px" color="white" />
           <Box>
             <AlertTitle fontSize="xl" fontWeight="bold">
               Parabéns pela sua Política! E agora?
@@ -100,7 +102,7 @@ export const Result: React.FC<ResultProps> = ({ results, reset, data }) => {
           colorScheme="green"
           variant="outline"
           bg="white"
-          color="gray.800"
+          color="purple.600"
           _hover={{ bg: 'gray.100' }}
           size="lg"
           flexShrink={0}
