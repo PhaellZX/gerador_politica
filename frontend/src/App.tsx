@@ -124,9 +124,12 @@ function App() {
         boxShadow="lg"
       >
         <VStack spacing={2} mb={8}>
-          <Heading as="h1" size="xl" textAlign="center">
-            Gerador de Política de Privacidade
+          <Heading as="h1" size="2xl" textAlign="center" color="blue.600">
+            MyGenPriPol
           </Heading>
+          <Text fontSize="xl" color="gray.600" textAlign="center" mt={0}>
+            Gerador de Política de Privacidade e Termos de Uso
+          </Text>
           <Text fontSize="lg" color="gray.600" textAlign="center" mt={0}>
             Baseado no modelo da LGPD (gov.br)
           </Text>
