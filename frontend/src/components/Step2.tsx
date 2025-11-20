@@ -135,14 +135,28 @@ export const Step2: React.FC<StepProps> = ({
       </VStack>
 
       {data.uses_analytics && (
-        <Alert status="info" borderRadius="md">
+        <Alert 
+          status="warning" 
+          variant="left-accent" 
+          borderRadius="md"
+          mt={2}
+        >
           <AlertIcon />
           <Box>
-            <AlertTitle>Dica!</AlertTitle>
-            <AlertDescription>
-              Ferramentas como Google Analytics podem ser complexas.
-              <Link href="https://go.hotmart.com/E103039216D?dp=1" color="blue.500" isExternal ml={1}>
-                Considere alternativas mais simples e focadas em privacidade.
+            <AlertTitle fontSize="sm" mb={1}>
+              O Google Analytics 4 pode ser bem complicado...
+            </AlertTitle>
+            <AlertDescription fontSize="sm">
+              Muitos sites perdem dados por configuração errada.
+              <Link 
+                href="https://go.hotmart.com/E103039216D?dp=1" 
+                color="orange.600" 
+                fontWeight="bold"  
+                textDecoration="underline"
+                isExternal 
+                ml={1}
+              >
+                Clique aqui e aprenda o passo a passo para configurar do jeito certo.
               </Link>
             </AlertDescription>
           </Box>
