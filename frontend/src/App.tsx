@@ -4,7 +4,9 @@ import { Step2 } from './components/Step2';
 import { Result } from './components/Result';
 
 // Importações do Chakra UI
-import { Container, Box, Heading, Text, VStack } from '@chakra-ui/react';
+import { Container, Box, Image, Text, VStack } from '@chakra-ui/react';
+
+import logoFull from './assets/logo-full.png';
 
 export interface IPolicyInput {
   site_name: string;
@@ -123,15 +125,17 @@ function App() {
         borderRadius="xl"
         boxShadow="lg"
       >
-        <VStack spacing={2} mb={8}>
-          <Heading as="h1" size="2xl" textAlign="center" color="blue.600">
-            MyGenPriPol
-          </Heading>
+        <Box mb={8} display="flex" justifyContent="center">
+        <Image
+          src={logoFull}
+          alt="Logo MyGenPriPol"
+          w={{ base: "250px", md: "400px" }}
+          objectFit="contain"
+        />
+        </Box>
+          <VStack spacing={2} mb={8}>
           <Text fontSize="xl" color="gray.600" textAlign="center" mt={0}>
             Gerador de Política de Privacidade e Termos de Uso
-          </Text>
-          <Text fontSize="lg" color="gray.600" textAlign="center" mt={0}>
-            Baseado no modelo da LGPD (gov.br)
           </Text>
         </VStack>
 

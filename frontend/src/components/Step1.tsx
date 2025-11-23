@@ -45,7 +45,7 @@ export const Step1: React.FC<StepProps> = ({ data, updateData, nextStep }) => {
 
   return (
     <VStack spacing={6} align="stretch">
-      <Heading as="h2" size="lg" fontWeight="semibold">
+      <Heading as="h2" size="lg" fontWeight="semibold" textAlign="center">
         Passo 1: Informações da Empresa e LGPD
       </Heading>
 
@@ -102,7 +102,7 @@ export const Step1: React.FC<StepProps> = ({ data, updateData, nextStep }) => {
 
       <Divider my={4} />
 
-      <Heading as="h3" size="md" fontWeight="semibold" color="blue.600">
+      <Heading as="h3" size="md" fontWeight="semibold" color="blue.600" textAlign="center">
         Informações da LGPD (Encarregado de Dados)
       </Heading>
       
@@ -113,10 +113,10 @@ export const Step1: React.FC<StepProps> = ({ data, updateData, nextStep }) => {
           name="dpo_name"
           value={data.dpo_name}
           onChange={handleChange}
-          placeholder="Ex: João da Silva (ou você mesmo)"
+          placeholder="Nome do responsável pelos dados"
           size="lg"
         />
-        <FormHelperText>
+        <FormHelperText textAlign="center">
           Pela LGPD, esta é a pessoa responsável por responder sobre os dados
           dos usuários.
         </FormHelperText>
@@ -133,7 +133,7 @@ export const Step1: React.FC<StepProps> = ({ data, updateData, nextStep }) => {
           placeholder="Ex: lgpd@seusite.com (ou seu email principal)"
           size="lg"
         />
-        <FormHelperText>
+        <FormHelperText textAlign="center">
           Este e-mail será público na política para os usuários entrarem em
           contato.
         </FormHelperText>
