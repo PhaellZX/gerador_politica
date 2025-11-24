@@ -10,17 +10,17 @@ app = FastAPI(
 )
 
 origins = [
-    "http://localhost:5173", # Endereço do seu app React (Vite)
-    "http://localhost:3000", # Endereço comum de app React (CRA)
-    "https://gerador-politica.vercel.app" # Endereço do app React hospedado
+    "http://localhost:5173", 
+    "http://localhost:3000", 
+    "https://gerador-politica.vercel.app" 
 ]
 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
     allow_credentials=True,
-    allow_methods=["*"], # Permite todos os métodos (GET, POST, etc)
-    allow_headers=["*"], # Permite todos os cabeçalhos
+    allow_methods=["*"], 
+    allow_headers=["*"], 
 )
 
 # --- Endpoints ---

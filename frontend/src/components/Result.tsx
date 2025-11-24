@@ -1,4 +1,3 @@
-// 1. Importações do Chakra (COM 'Text' e 'IconButton' REMOVIDOS)
 import {
   Button,
   VStack,
@@ -71,7 +70,6 @@ export const Result: React.FC<ResultProps> = ({ results, reset, data }) => {
   }
   return (
     <VStack spacing={6} align="stretch">
-      {/* --- Alerta de Afiliado Principal (Hostinger) --- */}
       <Alert
         status="success"
         variant="solid"
@@ -83,7 +81,6 @@ export const Result: React.FC<ResultProps> = ({ results, reset, data }) => {
         justifyContent="space-between"
         p={6}
       >
-        {/* ... (código do banner Hostinger) ... */}
         <HStack spacing={4} mb={{ base: 4, md: 0 }}>
           <AlertIcon boxSize="40px" color="white" />
           <Box>
@@ -110,8 +107,6 @@ export const Result: React.FC<ResultProps> = ({ results, reset, data }) => {
           Contrate Hostinger com 55% OFF
         </Button>
       </Alert>
-
-      {/* --- ALERTA CONDICIONAL PARA E-COMMERCE (Nuvemshop) --- */}
       {results && data.collects_payment_data && (
         <Alert
           status="info"

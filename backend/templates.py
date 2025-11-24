@@ -1,7 +1,6 @@
 from models import PolicyInput
 from datetime import date
 
-# Função auxiliar para gerar a data de hoje
 def get_today_date():
     return date.today().strftime("%d de %B de %Y")
 
@@ -14,7 +13,6 @@ def generate_policy(data: PolicyInput) -> str:
     today = get_today_date()
     company_display = data.company_name if data.company_name else data.site_name
     
-    # Começamos a construir o documento
     policy = f"# Política de Privacidade e Proteção de Dados\n\n"
     policy += f"**Controlador dos Dados:** {company_display}\n"
     policy += f"**Site:** {data.site_url}\n"

@@ -13,11 +13,11 @@ class PolicyInput(BaseModel):
     company_name: Optional[str] = None # Ex: "Minha Empresa LTDA"
     contact_email: EmailStr # Email geral de contato
 
-    # --- Passo 2: Informações da LGPD (Novos Campos) ---
+    # --- Passo 2: Informações da LGPD  ---
     dpo_name: str           # Nome do Encarregado (DPO)
     dpo_email: EmailStr     # Email do Encarregado (para reclamações da LGPD)
     
-    # --- Passo 3: Configurações de Coleta (Campos Antigos + Novos) ---
+    # --- Passo 3: Configurações de Coleta ---
     collects_personal_data: bool = True # Se coleta dados pessoais (nome, email, doc, etc.)
     collects_payment_data: bool = False # Se coleta dados de pagamento (cartão)
     
